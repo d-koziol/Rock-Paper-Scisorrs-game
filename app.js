@@ -55,11 +55,11 @@ function game() {   // Function that allows to play 5 rounds.
 }
 game();
 
-function score (playerScore, computerScore){ // Function that keeps score and reports it at the end of the game.
+function getScore (playerScore, computerScore){ // Function that keeps score and reports it at the end of the game.
     if (playerScore < computerScore) {
         console.log(`Game over, computer wins with score ${computerScore}:${playerScore}`)
     } else if ( playerScore > computerScore){
         console.log(`Game over, You won with score ${playerScore}:${computerScore}`);
     }
 }
-score (playerScore, computerScore);
+getScore (playerScore, computerScore);
