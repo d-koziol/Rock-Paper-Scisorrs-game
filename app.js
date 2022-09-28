@@ -1,14 +1,14 @@
-function getComputerChoice() {
+function getComputerChoice() {  // Function that generates random computer's weapon.
     const weapons = ["ROCK", "PAPER", "SCISSORS"];
     return weapons[Math.floor(Math.random() * weapons.length)];
 }
 
-let playerScore = 0;
+let playerScore = 0;  // Variables declaration.
 let computerScore = 0;
 let computerSelection;
 let playerSelection;
 
-function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {  // Function  that allows to play one round and declares the winner.
     
     computerSelection = getComputerChoice();
     playerSelection = prompt("Choose your weapon(rock, paper or scissors)").toLocaleUpperCase();
@@ -47,17 +47,15 @@ function playRound(playerSelection, computerSelection) {
    
   playRound(playerSelection, computerSelection);
 
-function game() {
+function game() {   // Function that allows to play 5 rounds.
 
-
-
-    for (let i=0; i <= 5; i++){
+    for (let i=0; i <= 5; i++){ 
         playRound();
     }
 }
 game();
 
-function score (playerScore, computerScore){
+function score (playerScore, computerScore){ // Function that keeps score and reports it at the end of the game.
     if (playerScore < computerScore) {
         console.log(`Game over, computer wins with score ${computerScore}:${playerScore}`)
     } else if ( playerScore > computerScore){
