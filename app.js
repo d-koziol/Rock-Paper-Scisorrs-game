@@ -41,26 +41,33 @@ function playRound(playerSelection) {  // Function  that allows to play one roun
     
     if (playerSelection === computerSelection) {
         
-            rScore.textContent = `Result: It's a tie... Try again.`;
+            rScore.textContent = `It's a tie... Try again.`;
             return 0;
         }
         else if( (playerSelection === "ROCK" && computerSelection === "SCISSORS") || 
-                (playerSelection === "PAPER" && computerSelection ==="ROCK") || 
+                 (playerSelection === "PAPER" && computerSelection ==="ROCK") || 
                  (playerSelection === "SCISSORS" && computerSelection === "PAPER") ) 
         {
-            rScore.textContent = `Result: You Win This Round! ${playerSelection} beats ${computerSelection}.`;
+            rScore.textContent = `You Win This Round! ${playerSelection} beats ${computerSelection}.`;
             pScore.textContent = parseInt(pScore.textContent) + 1;
             return 1;
         }
         else 
         {
-            rScore.textContent = `Result: You Lose This Round! ${computerSelection} beats ${playerSelection}.`;
+            rScore.textContent = `You Lose This Round! ${computerSelection} beats ${playerSelection}.`;
             cScore.textContent = parseInt(cScore.textContent) + 1;
             return -1;
         }
     }
 
-   
+function game(playerScore, computerScore) {   // Function that allows to play 5 rounds.
+    if (playerScore = 5){
+        console.log(`You won! The result is ${playerScore} to ${computerScore}` );
+    } else if (computerScore = 5){
+        console.log(`Computer won! The result is ${computerScore} to ${playerScore}` );
+    }
+    }
+game(playerScore, computerScore);
 
 
 function getScore (playerScore, computerScore){ // Function that keeps score and reports it at the end of the game.
