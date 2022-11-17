@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="app.js" defer></script>
     <title>Rock Paper Scissors game</title>
 </head>
 <body>
-    <button id="rock_btn">ROCK</button>
-    <button id="paper_btn">PAPER</button>
-    <button id="scissors_btn">SCISSORS</button>
+    <button id="rock_btn" class="playButton">ROCK</button>
+    <button id="paper_btn" class="playButton">PAPER</button>
+    <button id="scissors_btn" class="playButton">SCISSORS</button>
 
     <div id="pScoreDisplay">
         Player Score:
@@ -24,13 +24,14 @@
     </div>
 
     <div id="roundResultDisplay">
-        Result: 
+        Round Result: 
         <p id="roundResult"></p>
     </div>
 
-    <div id="roundScoreDisplay"> 
-        Score:
-        <p id="roudScore">0</p>
+    <div id="roundNumberDisplay"> 
+        Round Number:
+        <p id="roundNumber">0</p>
+        <p id="gameResult">Game Result:</p>
     </div>
 
 </body>
