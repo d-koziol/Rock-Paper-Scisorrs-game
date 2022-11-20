@@ -4,15 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="app.js" defer></script>
     <title>Rock Paper Scissors game</title>
+
 </head>
 <body>
+    <header id="logo">
+        <p id="logoWelcome">Welcome to Rock-Paper-Scissors game!</p>
+    </header>
+<div id="buttons">
     <button id="rock_btn" class="playButton">ROCK</button>
     <button id="paper_btn" class="playButton">PAPER</button>
     <button id="scissors_btn" class="playButton">SCISSORS</button>
-
+</div>
+<div id="content">
     <div id="pScoreDisplay">
         Player Score:
         <p id="playerScore">0</p>
@@ -32,8 +41,11 @@
         Round Number:
         <p id="roundNumber">0</p>
     </div>
-    
+</div>
+
+<div id="resetBtn">
     <button id="reset_btn">RESET</button>
+</div>
 
 </body>
 </html>
