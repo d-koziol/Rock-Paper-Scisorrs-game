@@ -1,13 +1,19 @@
-let playerScore = 0;  // Variables declaration.
-let computerScore = 0;
-let computerSelection;
-let playerSelection;
-let roundCounter = 0;
-const maxRound = 5;
-
-
-
-function getComputerChoice() {  // Function that generates random computer's weapon.
+const game = () => {
+    let playerScore = 0;  // Variables declaration.
+    let computerScore = 0;
+    let computerSelection;
+    let playerSelection;
+    let roundCounter = 0;
+    
+    const pScore = document.querySelector("#playerScore");
+    const cScore = document.querySelector("#computerScore");
+    const rResult = document.querySelector("#roundResult");
+    const rNumber = document.querySelector("#roundNumber");
+    const rButton = document.querySelector("#reset_btn");
+    
+    const playGame = () => {
+        
+const getComputerChoice = () => {  
     const weapons = ["ROCK", "PAPER", "SCISSORS"];
     return weapons[Math.floor(Math.random() * weapons.length)];
 }
@@ -34,48 +40,51 @@ buttons.forEach((button) => {
     return playerSelection;
 });
 
-function playRound(playerSelection) {  // Function  that allows to play one round and declares the winner.
+
+const playRound = (playerSelection) => {  
     
     computerSelection = getComputerChoice();
-    const pScore = document.querySelector("#playerScore");
-    const cScore = document.querySelector("#computerScore");
-    const rResult = document.querySelector("#roundResult");
-    const rNumber = document.querySelector("#roundNumber");
     
     
     if (playerSelection === computerSelection) {
-        rNumber.textContent = roundCounter += 1;
+        roundCounter++;
+        rNumber.textContent = roundCounter;
         rResult.textContent = `It's a tie... Try again.`;
             
-        }
-        else if( (playerSelection === "ROCK" && computerSelection === "SCISSORS") || 
-        (playerSelection === "PAPER" && computerSelection ==="ROCK") || 
+    }
+    else if( (playerSelection === "ROCK" && computerSelection === "SCISSORS") || 
+    (playerSelection === "PAPER" && computerSelection ==="ROCK") || 
         (playerSelection === "SCISSORS" && computerSelection === "PAPER") ) 
         {
             rResult.textContent = `You Win This Round! ${playerSelection} beats ${computerSelection}.`;
-            pScore.textContent = parseInt(pScore.textContent) + 1;
-            rNumber.textContent = roundCounter += 1;
+            roundCounter++;
+            playerScore++;
+            pScore.textContent = playerScore;
+            rNumber.textContent = roundCounter;
+            return playerScore;
         }
         else 
         {
             rResult.textContent = `You Lose This Round! ${computerSelection} beats ${playerSelection}.`;
-            cScore.textContent = parseInt(cScore.textContent) + 1;
-            rNumber.textContent = roundCounter += 1;
+            roundCounter++;
+            computerScore++;
+            cScore.textContent = computerScore;
+            rNumber.textContent = roundCounter; 
+            return computerScore;
         }
-        return roundCounter;
     }
+    
+    const resEt = () => {
+        playerScore = 0;
+        computerScore = 0; 
+        roundCounter = 0;
+        rNumber.textContent = "0"
+        pScore.textContent = "0"; 
+        cScore.textContent = "0";
+    };
+    rButton.addEventListener("click", resEt);
+}
+playGame();
 
-function endGame(playerScore, computerScore) {
-        const gResult = document.querySelector("#gameResult");
-        if (playerScore > computerScore && roundCounter === maxRound) {
-            gResult.textContent = `You won this game with score ${playerScore} to ${computerScore}`;
-        } 
-        else if (computerScore > playerScore && roundCounter === maxRound) {
-            gResult.textContent = `You lost this game with score ${playerScore} to ${computerScore}`;
-        }
-        else if (playerScore === computerScore && roundCounter === maxRound) {
-            gResult.textContent = `It's a tie ${playerScore} to ${computerScore}`;
-        }
-        console.log(gResult);
-    }
-endGame();
+}
+game();
