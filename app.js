@@ -10,7 +10,10 @@ const game = () => {
     const rResult = document.querySelector("#roundResult");
     const rNumber = document.querySelector("#roundNumber");
     const rButton = document.querySelector("#reset_btn");
-    
+
+
+
+
     const playGame = () => {
         
 const getComputerChoice = () => {  
@@ -83,6 +86,7 @@ const playRound = (playerSelection) => {
         cScore.textContent = "0";
     };
     rButton.addEventListener("click", resEt);
+
 }
 playGame();
 

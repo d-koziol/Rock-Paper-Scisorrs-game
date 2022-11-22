@@ -17,11 +17,23 @@ body {
     font-size: 30px;
     font-weight: bolder;
     padding: 5px;
+    background-color:cadetblue;
 }
 button {
-    height: 40px;
+    height: 100px;
     width: 100px;
+    margin: 20px;
+    border-style: solid;
+    border-color: #304D5F;
 }
+button:hover {
+    border-color:cadetblue;
+    background-color: cadetblue;
+    border-radius: 20%;
+    transition: 0.6s;
+
+}
+
 #content {
     font-size: 22px;
     
@@ -30,6 +42,35 @@ button {
 #buttons {
     display: flex;
     justify-content: space-around;
+    
+
+}
+
+#rock_btn {
+    background: url(images/rock.svg);
+    background-size: cover;
+    
+}
+
+#scissors_btn {
+    background: url(images/scissors.svg);
+    background-size: cover;
+    
+}
+
+#paper_btn {
+    background: url(images/paper.svg);
+    background-size: cover;
+}
+
+#reset_btn {
+    border-style: solid;
+    border-color: #304D5F;
+    border-radius: 100%;
+    color: black;
+    font-weight: 900;
+    font-size: 20px;
+
 }
 
 #resetBtn {
