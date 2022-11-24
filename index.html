@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,43 +13,58 @@
     <title>Rock Paper Scissors game</title>
 
 </head>
+
 <body>
+    
     <header id="logo">
-        <p id="logoWelcome">Welcome to Rock-Paper-Scissors game!</p>
+        <p id="logoWelcome">Welcome to Infinity Rock-Paper-Scissors game!</p>
     </header>
-<div id="buttons">
-    <button id="rock_btn" class="playButton"></button>
-    <button id="paper_btn" class="playButton"></button>
-    <button id="scissors_btn" class="playButton"></button>
-</div>
-<div id="content">
-    <div id="score">
-        <div id="pScoreDisplay">
-            Player Score:
-            <p id="playerScore">0</p>
+    
+    <div id="line">
+        <hr>
+    </div>
+
+    <div id="buttons">
+        <button id="rock_btn" class="playButton"></button>
+        <button id="paper_btn" class="playButton"></button>
+        <button id="scissors_btn" class="playButton"></button>
+    </div>      
+
+
+    <div id="content">
+
+        <div id="score">
+            <div id="pScoreDisplay">
+                Player Score:
+                <p id="playerScore">0</p>
+            </div>
+
+            <div id="cScoreDisplay">
+                Computer Score: 
+                <p id="computerScore">0</p>
+            </div>
+
         </div>
 
-        <div id="cScoreDisplay">
-            Computer Score: 
-            <p id="computerScore">0</p>
+        <div id="rounds">
+
+            <div id="roundResultDisplay">
+                Round Result: 
+                <p id="roundResult"></p>
+            </div>
+
+            <div id="roundNumberDisplay"> 
+                Round Number:
+                <p id="roundNumber">0</p>
+            </div>
+
         </div>
     </div>
-    <div id="rounds">
-        <div id="roundResultDisplay">
-            Round Result: 
-            <p id="roundResult"></p>
-        </div>
 
-        <div id="roundNumberDisplay"> 
-            Round Number:
-            <p id="roundNumber">0</p>
-        </div>
+    <div id="resetBtn">
+        <button id="reset_btn">RESET</button>
     </div>
-</div>
-
-<div id="resetBtn">
-    <button id="reset_btn">RESET</button>
-</div>
 
 </body>
+<footer></footer>
 </html>

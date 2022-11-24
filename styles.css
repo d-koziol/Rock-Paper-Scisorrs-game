@@ -1,6 +1,16 @@
 :root {
     --dark-color: #304D5F;
 }
+
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px rgb(33, 199, 199), 0 0 30px #ffffff, 0 0 40px rgb(33, 199, 199), 0 0 50px #ffffff, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+      text-shadow: 0 0 20px rgb(33, 199, 199), 0 0 30px rgb(33, 199, 199), 0 0 40px #ffffff, 0 0 50px #ffffff, 0 0 60px #ffffff, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+}
+
 body { 
     margin: 0;
     background-color: var(--dark-color);
@@ -16,12 +26,24 @@ body {
     text-align: center;
     font-size: 45px;
     font-weight: bolder;
-    padding: 5px;
     background-color:cadetblue;
 }
 #logoWelcome {
     margin: auto;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
 }
+
+hr {
+    margin: 0;
+    border: 4px solid white; 
+    -webkit-box-shadow: 0px 0px 4px white;
+    -moz-box-shadow: 0px 0px 4px white;
+    box-shadow: 0px 0px 4px white; 
+    
+}
+
 button {
     height: 150px;
     width: 150px;
