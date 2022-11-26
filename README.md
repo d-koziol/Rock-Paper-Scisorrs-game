@@ -1,5 +1,5 @@
 # Rock-Paper-Scissors-game
-Live https://d-koziol.github.io/Rock-Paper-Scissors-game/
+Live https://d-koziol.github.io/Rock-Paper-Scissors-game/ <br />
 Hello !
 This was simply, console,  Rock-Paper-Scissors game.
 During this task I learnt some of JavaScript basics like:
